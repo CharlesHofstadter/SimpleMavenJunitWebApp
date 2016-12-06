@@ -2,4 +2,10 @@ engines:
   pmd:
     enabled: true
     channel: "beta"
-  Adding cdding checkstyle
+  checkstyle:
+    enabled: true
+    channel: "beta"
+
+-ratings:
+ -  paths:
+ -  - "**.java"
