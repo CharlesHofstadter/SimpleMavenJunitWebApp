@@ -1441,7 +1441,7 @@ data:
         # Labels - additional labels to be attached to the alert
         labels:
           severity: 'critical'
-  prometheus.yaml: |
+  prometheus.yml: |
     global:
       scrape_interval: 30s
       scrape_timeout: 10s
