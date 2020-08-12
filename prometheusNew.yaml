@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: prom-k8s
 data:
-  rule/openshift-operator-lifecycle-manager-olm-alert-rules.yaml: |
+  rule.openshift-operator-lifecycle-manager-olm-alert-rules.yaml: |
     groups:
     - name: olm.failing_operators.rules
       rules:
@@ -14,7 +14,7 @@ data:
         expr: csv_abnormal{phase="Failed"}
         labels:
           severity: info
-  rule/openshift-machine-config-operator-machine-config-daemon.yaml: |
+  rule.openshift-machine-config-operator-machine-config-daemon.yaml: |
     groups:
     - name: mcd-reboot-error
       rules:
@@ -54,7 +54,7 @@ data:
           mcd_kubelet_state > 2
         labels:
           severity: warning
-  rule/openshift-service-catalog-apiserver-operator-openshift-service-catalog-apiserver-operator.yaml: |
+  rule.openshift-service-catalog-apiserver-operator-openshift-service-catalog-apiserver-operator.yaml: |
     groups:
     - name: svcat-apiserver-enabled
       rules:
@@ -66,7 +66,7 @@ data:
           service_catalog_apiserver_enabled > 0
         labels:
           severity: warning
-  rule/openshift-marketplace-marketplace-alert-rules.yaml: |
+  rule.openshift-marketplace-marketplace-alert-rules.yaml: |
     groups:
     - name: marketplace.community_operators.rules
       rules:
@@ -131,7 +131,7 @@ data:
         for: 15m
         labels:
           severity: warning
-  rule/openshift-image-registry-image-registry-operator-alerts.yaml: |
+  rule.openshift-image-registry-image-registry-operator-alerts.yaml: |
     groups:
     - name: ImageRegistryOperator
       rules:
@@ -155,7 +155,7 @@ data:
         for: 5m
         labels:
           severity: warning
-  rule/openshift-cluster-samples-operator-samples-operator-alerts.yaml: |
+  rule.openshift-cluster-samples-operator-samples-operator-alerts.yaml: |
     groups:
     - name: SamplesOperator
       rules:
@@ -192,7 +192,7 @@ data:
         for: 2h
         labels:
           severity: warning
-  rule/openshift-monitoring-prometheus-k8s-rules.yaml: |
+  rule.openshift-monitoring-prometheus-k8s-rules.yaml: |
     groups:
     - name: node-exporter.rules
       rules:
@@ -1393,7 +1393,7 @@ data:
         for: 10m
         labels:
           severity: warning
-  rule/openshift-service-catalog-controller-manager-operator-openshift-service-catalog-controller-manager-operator.yaml: |
+  rule.openshift-service-catalog-controller-manager-operator-openshift-service-catalog-controller-manager-operator.yaml: |
     groups:
     - name: svcat-controller-manager-enabled
       rules:
@@ -1405,7 +1405,7 @@ data:
           service_catalog_controller_manager_enabled > 0
         labels:
           severity: warning
-  rule/openshift-multus-prometheus-k8s-rules.yaml: |
+  rule.openshift-multus-prometheus-k8s-rules.yaml: |
     groups:
     - name: multus-admission-controller-monitor-service.rules
       rules:
@@ -1415,7 +1415,7 @@ data:
       - expr: |
           max  (network_attachment_definition_instances) by (networks)
         record: cluster:network_attachment_definition_instances:max
-  rule/rules.yaml: |
+  rule.rules.yaml: |
     groups:
     - name: AllInstances
       rules:
