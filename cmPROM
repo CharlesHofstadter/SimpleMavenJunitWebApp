@@ -1460,7 +1460,7 @@ data:
          static_configs:
            - targets: ['alertmanager-i2devops.sandbox-ocp431-one-89dadfe96916fcd27b299431d0240c37-0000.eu-gb.containers.appdomain.cloud']
     rule_files:
-    - rule/*.yaml
+    - rule.*
     scrape_configs:
     - job_name: 'prometheus'
       scrape_interval: 5s
